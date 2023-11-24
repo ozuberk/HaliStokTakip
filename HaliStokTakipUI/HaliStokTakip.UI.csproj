@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2A588CD-C0F9-4003-A696-0DB5CB8B3D47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HaliStokTakipUI</RootNamespace>
+    <AssemblyName>HaliStokTakipUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnasayfa.Designer.cs">
+      <DependentUpon>FormAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHaliBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHaliBilgileri.Designer.cs">
+      <DependentUpon>FormHaliBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHalilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHalilar.Designer.cs">
+      <DependentUpon>FormHalilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIadeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIadeler.Designer.cs">
+      <DependentUpon>FormIadeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKargoTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKargoTakip.Designer.cs">
+      <DependentUpon>FormKargoTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKullanicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKullanicilar.Designer.cs">
+      <DependentUpon>FormKullanicilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriler.Designer.cs">
+      <DependentUpon>FormMusteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSiparisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSiparisler.Designer.cs">
+      <DependentUpon>FormSiparisler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSiparisOdemeleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSiparisOdemeleri.Designer.cs">
+      <DependentUpon>FormSiparisOdemeleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStoklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStoklar.Designer.cs">
+      <DependentUpon>FormStoklar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAnasayfa.resx">
+      <DependentUpon>FormAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHaliBilgileri.resx">
+      <DependentUpon>FormHaliBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHalilar.resx">
+      <DependentUpon>FormHalilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIadeler.resx">
+      <DependentUpon>FormIadeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKargoTakip.resx">
+      <DependentUpon>FormKargoTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKullanicilar.resx">
+      <DependentUpon>FormKullanicilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriler.resx">
+      <DependentUpon>FormMusteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSiparisler.resx">
+      <DependentUpon>FormSiparisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSiparisOdemeleri.resx">
+      <DependentUpon>FormSiparisOdemeleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStoklar.resx">
+      <DependentUpon>FormStoklar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaliStokTakipBLL\HaliStokTakip.BLL.csproj">
+      <Project>{de0acee3-da3c-42df-80d7-398b33d95e23}</Project>
+      <Name>HaliStokTakip.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HaliStokTakipDLL\HaliStokTakip.DLL.csproj">
+      <Project>{bc8b75db-8457-46be-b220-ac360f5dff3f}</Project>
+      <Name>HaliStokTakip.DLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sil.ico" />
+    <None Include="Resources\Kaydet.ico" />
+    <None Include="Resources\Guncelle.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

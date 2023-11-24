@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE0ACEE3-DA3C-42DF-80D7-398B33D95E23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaliStokTakipBLL</RootNamespace>
+    <AssemblyName>HaliStokTakipBLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\IBoyutlar.cs" />
+    <Compile Include="Interface\IDesenler.cs" />
+    <Compile Include="Interface\IHali.cs" />
+    <Compile Include="Interface\IIadeler.cs" />
+    <Compile Include="Interface\IKargo.cs" />
+    <Compile Include="Interface\IKategori.cs" />
+    <Compile Include="Interface\IKullanici.cs" />
+    <Compile Include="Interface\IMarka.cs" />
+    <Compile Include="Interface\IMusteri.cs" />
+    <Compile Include="Interface\INotlar.cs" />
+    <Compile Include="Interface\IOdemeler.cs" />
+    <Compile Include="Interface\IRenkler.cs" />
+    <Compile Include="Interface\ISiparis.cs" />
+    <Compile Include="Interface\ISiparisDetay.cs" />
+    <Compile Include="Interface\IStok.cs" />
+    <Compile Include="Interface\IYetki.cs" />
+    <Compile Include="Manager\BoyutlarManager.cs" />
+    <Compile Include="Manager\DesenManager.cs" />
+    <Compile Include="Manager\HalilarManager.cs" />
+    <Compile Include="Manager\IadeManager.cs" />
+    <Compile Include="Manager\KargolarManager.cs" />
+    <Compile Include="Manager\KategoriManager.cs" />
+    <Compile Include="Manager\KullanicilarManager.cs" />
+    <Compile Include="Manager\MarkalarManager.cs" />
+    <Compile Include="Manager\MusteriManager.cs" />
+    <Compile Include="Manager\NotlarManager.cs" />
+    <Compile Include="Manager\OdemelerManager.cs" />
+    <Compile Include="Manager\RenklerManager.cs" />
+    <Compile Include="Manager\SiparisDetayManager.cs" />
+    <Compile Include="Manager\SiparislerManager.cs" />
+    <Compile Include="Manager\StokManager.cs" />
+    <Compile Include="Manager\YetkilerManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaliStokTakipDLL\HaliStokTakip.DLL.csproj">
+      <Project>{bc8b75db-8457-46be-b220-ac360f5dff3f}</Project>
+      <Name>HaliStokTakip.DLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
